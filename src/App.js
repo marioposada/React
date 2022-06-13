@@ -1,5 +1,7 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Componente from './components/Componente';
 
 function App() {
   let auth=true
@@ -11,7 +13,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-          { auth? "El usuario esta logueado": "El ususario no esta logjeado"}
+          { auth? "El usuario esta lfffff": "El ususario no esta logjeado"}
         </p>
         <a
           className="App-link"
@@ -22,6 +24,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <section>
+            <Componente msg="Hola soy un componente funcional desde una prop"/>
+      </section>
     </div>
   );
 }
