@@ -2,18 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Componente from './components/Componente';
+import Propiedades from './components/Propiedades';
 
 function App() {
-  let auth=true
+  
   return (
     <div className="App">
       <header className="App-header">
+        <section>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          { auth? "El usuario esta lfffff": "El ususario no esta logjeado"}
         </p>
         <a
           className="App-link"
@@ -23,10 +22,22 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-      <section>
+        </section>
+        <section>
             <Componente msg="Hola soy un componente funcional desde una prop"/>
+            <hr/>
+            <Propiedades 
+            cadena="Esto es una cadena de texto" 
+            numero = {19}   
+            booleano= {true}  
+            array = {[1,2,3]} 
+            objeto = {{nombre:"Mario", correo:"mposada@brfsa.com.ar"}}    
+            funcion={(num) => num * num}
+            elementoReact={<i>Esto es un elementoReact</i>} 
+            componenteReact={<Componente msg="Soy un componente pasado como Props"/>}            
+                  />
       </section>
+      </header>
     </div>
   );
 }
