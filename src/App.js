@@ -3,12 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import Componente from './components/Componente';
 import Propiedades from './components/Propiedades';
+import MiComponente from './components/MiComponente';
 
 function App() {
   
   return (
     <div className="App">
       <header className="App-header">
+        <MiComponente texto="Nuevo componente"/>
         <section>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
