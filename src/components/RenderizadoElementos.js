@@ -5,7 +5,7 @@ import data from "../helpers/data.json";
 function ElementosLista(props){
         return(
             <li>
-                <a href={props.el.web}>{props.el.name}</a>
+                <a href={props.el.web} target="_blank" rel="noopener">{props.el.name} </a>
             </li>
     )
     
@@ -30,7 +30,7 @@ return(
         <h3>Estaciones del año</h3>
         <ol>
             {
-                this.state.estaciones.map((el,index)=> <li key={index}>{el}</li>)
+                this.state.estaciones.map((el)=> <li key={el.id}>{el}</li>)
             }
         </ol>
         <h3>Frameworks FrontEnd Javascript</h3>
