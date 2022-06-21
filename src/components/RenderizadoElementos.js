@@ -11,6 +11,15 @@ function ElementosLista(props){
     
 }
 
+function ElementoLista2(props){
+    return(
+        <li>
+           <p>{props.msg}</p>
+        </li>
+)
+
+}
+
 export default class RenderizadoElementos extends Component {
 constructor(props){
     super(props);
@@ -28,6 +37,7 @@ return(
     <div>
         <h2>REnderizado de Elementos</h2>
         <h3>Estaciones del año</h3>
+        <p>{this.props.msg}</p>
         <ol>
             {
                 this.state.estaciones.map((el)=> <li key={el.id}>{el}</li>)
@@ -36,6 +46,7 @@ return(
         <h3>Frameworks FrontEnd Javascript</h3>
         <ul>
             {data.frameworks.map((el,index)=> <ElementosLista key={index} el={el}/>)}
+            <ElementoLista2 msg="Nuevo mensaje"/>
         </ul>
     </div>
 )

@@ -46,7 +46,8 @@ function App() {
                   <hr/>
                   <RenderizadoCondicional/>
                   <hr/>
-                  <RenderizadoElementos/>
+                  <RenderizadoElementos />
+                  
       </section>
       </header>
     </div>
