@@ -49,17 +49,13 @@ render(){
 }
 
 export  class EventosES7 extends Component {
-    constructor(props){
-        super(props);
-
-        this.state = {
+    state = {
 contador: 0
         }
-        this.sumar =this.sumar.bind(this)
-        this.restar =this.restar.bind(this)
-    }
+        
+    
 
-    sumar(e) {
+    sumar = (e) => {
         console.log("Sumando");
         console.log(this);
         this.setState({
@@ -67,7 +63,7 @@ contador: 0
 });
     }
 
-    restar(e) {
+    restar= (e) =>{
         console.log(this.sumar)
         console.log("Sumando");
         console.log(this);
