@@ -90,3 +90,13 @@ render(){
 }
 
 }
+
+export class MasSobreEventos extends Component {
+    render(){
+        return (
+            <div>
+                <h2>Mas sobre eventos</h2>
+            </div>
+        )
+    }
+}
