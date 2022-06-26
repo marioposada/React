@@ -91,11 +91,24 @@ render(){
 
 }
 
+function Boton () {
+    return(
+        <button>Componente Boton</button>
+    )
+}
+
 export class MasSobreEventos extends Component {
+    handleClick = (e) => {
+        console.log(e)
+        console.log(e.target)
+    }
+
     render(){
         return (
             <div>
                 <h2>Mas sobre eventos</h2>
+                <button onClick={this.handleClick}>Saludar</button>
+                <Boton />
             </div>
         )
     }
