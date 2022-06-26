@@ -52,10 +52,7 @@ export  class EventosES7 extends Component {
     state = {
 contador: 0
         }
-        
-    
-
-    sumar = (e) => {
+       sumar = (e) => {
         console.log("Sumando");
         console.log(this);
         this.setState({
@@ -91,13 +88,12 @@ render(){
 
 }
 
-function Boton () {
-    return(
-        <button>Componente Boton</button>
-    )
-}
+const Boton = ({ myOnClick }) => (
+    <button onClick={myOnClick}>Botón hecho componente</button>
+  );
 
 export class MasSobreEventos extends Component {
+    
     handleClick = (e) => {
         console.log(e)
         console.log(e.target)
@@ -108,7 +104,7 @@ export class MasSobreEventos extends Component {
             <div>
                 <h2>Mas sobre eventos</h2>
                 <button onClick={this.handleClick}>Saludar</button>
-                <Boton />
+                <Boton myOnClick={(e) => this.handleClick(e,"hola")}/>
             </div>
         )
     }
