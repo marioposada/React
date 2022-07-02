@@ -6,6 +6,9 @@ export default class Padre extends Component{
     }
 
     incrementarContador = (e) => {
+        this.setState({
+            contador: this.state.contador +1,
+        })
 
     }
 render(){
