@@ -1,6 +1,23 @@
 import React, {Component} from "react";
 
 
+class Reloj extends Component {
+    constructor(props){
+        super(props);
+    };
+
+    componentWillUnmount(){
+        console.log(3,"El componente ha sido eliminado de DOM")
+    }
+
+    render(){
+        return(
+            <h3>{this.props.hora}</h3>
+        )
+    }
+}
+
+
 export default class CicloVida extends Component {
    
    
@@ -9,7 +26,8 @@ super(props);
 console.log(0, "El componente se inicializa pero no esta en el DOM")
 
 this.state = {
-    hora: new Date().toLocaleTimeString()
+    hora: new Date().toLocaleTimeString(),
+    visible: false,
 }
 
 this.temporizador = null;
@@ -25,8 +43,9 @@ componentDidUpdate(prevProps,prevState){
     console.log(2, "El estado o las props del componente han cambiado");
     console.log(prevProps)
     console.log(prevState)
-    
+
 }
+
 
 tictac = () => {
     this.temporizador = setInterval(() => {
@@ -40,11 +59,17 @@ tictac = () => {
 
 iniciar = () => {
     this.tictac();
+    this.setState({
+        visible: true,
+    })
 
 };
 
 detener = () => {
     clearInterval(this.temporizador)
+    this.setState({
+        visible: false,
+    })
     
 };
     
@@ -53,11 +78,9 @@ detener = () => {
     render(){
     console.log(4, "El componente se dibuja por algun cambio en el DOM")
         return(
-
-
             <>
-            <h2>Ciclo de vide de los componentes</h2>
-            <h3>{this.state.hora}</h3>
+            <h2> Ciclo de vide de los componentes </h2>
+           {this.state.visible && <Reloj hora={this.state.hora}/>}
             <button onClick={this.iniciar}>Iniciar</button>
             <button onClick={this.detener}>Detener</button>
             </>
