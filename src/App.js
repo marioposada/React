@@ -10,6 +10,7 @@ import RenderizadoElementos from './components/RenderizadoElementos';
 import {EventosES6 , EventosES7, MasSobreEventos}  from './components/Eventos';
 import Padre from './components/ComunicacionComponentes';
 import CicloVida from './components/CicloVida';
+import AjaxApis from './components/AjaxApis';
 
 function App() {
   
@@ -58,6 +59,7 @@ function App() {
                   <MasSobreEventos />
                   <Padre />
                   <CicloVida />
+                  < AjaxApis />
                   
       </section>
       </header>
