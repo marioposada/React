@@ -11,25 +11,30 @@ function Pokemon(props){
 }
 
 export default class AjaxApis extends Component {
+
+
     state = {
         pokemons: []
     }
 
-    componentDidMount(){
+
+    async componentDidMount(){
        let url="https://pokeapi.co/api/v2/pokemon/"
-       fetch(url)
+   await fetch(url)
        .then(res => res.json())
        .then(json => {
         console.log(json);
         json.results.forEach(element => {
             fetch(element.url)
             .then(res => res.json())
-            .then(json =>{
+            .then(json => {
                 let pokemon = {
                     id: json.id,
                     name: json.name,
                     avatar: json.sprites.front_default
                 }
+                let pokemons = [...this.state.pokemons, pokemon];
+                this.setState({pokemons})
             })
                 
         });
@@ -40,10 +45,13 @@ export default class AjaxApis extends Component {
 
        })
     }
+
+
     render(){
         return(
             <>
             <h2>Peticiones asincronas en componentes de clases </h2>
+            {this.state.pokemons.map(el => <Pokemon key={el.id} name={el.name} avatar={el.avatar}/>)}
             </>
         )
     }
