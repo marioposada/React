@@ -63,7 +63,7 @@ function App() {
                   <CicloVida />
                   < AjaxApis />
                   <ContadorHooks />
-                  <PracticeHooks estado={"noche"}/>
+                  <PracticeHooks estado={"dia"}/>
                   
       </section>
       </header>

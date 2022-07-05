@@ -4,6 +4,8 @@ export default  function PracticeHooks(props){
 
 
     const [hora,setHora] = useState(props.estado)
+
+   
     
  function Dia (){
     return(
