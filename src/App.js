@@ -12,6 +12,7 @@ import Padre from './components/ComunicacionComponentes';
 import CicloVida from './components/CicloVida';
 import AjaxApis from './components/AjaxApis';
 import ContadorHooks from './components/ContadorHooks';
+import PracticeHooks from './components/PracticeHooks';
 
 function App() {
   
@@ -62,6 +63,7 @@ function App() {
                   <CicloVida />
                   < AjaxApis />
                   <ContadorHooks />
+                  <PracticeHooks estado={"noche"}/>
                   
       </section>
       </header>
