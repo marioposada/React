@@ -13,6 +13,7 @@ import CicloVida from './components/CicloVida';
 import AjaxApis from './components/AjaxApis';
 import ContadorHooks from './components/ContadorHooks';
 import PracticeHooks from './components/PracticeHooks';
+import ScrollHooks from './components/ScrollHooks';
 
 function App() {
   
@@ -63,7 +64,9 @@ function App() {
                   <CicloVida />
                   < AjaxApis />
                   <ContadorHooks />
-                  <PracticeHooks estado={"dia"}/>
+                  <PracticeHooks estado={"noche"}/>
+                  <hr />
+                  <ScrollHooks />
                   
       </section>
       </header>

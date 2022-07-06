@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Box, Flex } from "@chakra-ui/react"
 
 export default  function PracticeHooks(props){
 
@@ -9,12 +10,13 @@ export default  function PracticeHooks(props){
     
  function Dia (){
     return(
-        <h3>Estamos en BRf</h3>
+        <Box>Estamos en BRf</Box>
+        
     )
  }
  function Noche (){
     return(
-        <h3>Estamos estudiando React</h3>
+        <Box textAlign="center"  display="flex" alignItems="center" justifyContent="space-between" w='100%' h='200px' bgGradient='linear(to-r, green.200, pink.500)'>Estamos estudiando React</Box>
     )
  }
 
