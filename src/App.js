@@ -14,6 +14,7 @@ import AjaxApis from './components/AjaxApis';
 import ContadorHooks from './components/ContadorHooks';
 import PracticeHooks from './components/PracticeHooks';
 import ScrollHooks from './components/ScrollHooks';
+import RelojHooks from './components/RelojHooks';
 
 function App() {
   
@@ -67,6 +68,8 @@ function App() {
                   <PracticeHooks estado={"noche"}/>
                   <hr />
                   <ScrollHooks />
+                  <hr />
+                  <RelojHooks />
                   
       </section>
       </header>
