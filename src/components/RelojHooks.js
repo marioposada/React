@@ -12,12 +12,12 @@ export default function RelojHooks() {
         setHora(new Date().toLocaleTimeString());
       }, 1000);
     } else {
-        clearInterval(temporizador);
+      clearInterval(temporizador);
     }
 
     return () => {
-        console.log("Fase de desmontaje");
-        clearInterval(temporizador);
+      console.log("Fase de desmontaje");
+      clearInterval(temporizador);
     };
   }, [visible]);
 
