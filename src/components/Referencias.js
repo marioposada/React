@@ -1,21 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 
 export default function Referencias() {
+  let refMenuBtn = useRef();
+  let refMenu = useRef();
+
+  const handleToggleMenu = (e) => {
+    if (refMenuBtn.current.texContent === "Menu") {
+      refMenuBtn.current.texContent = "Cerrar";
+      refMenu.current.styles.display = "block";
+    } else {
+      refMenuBtn.current.texContent = "Menu";
+      refMenu.current.styles.display = "none";
+    }
+  };
   return (
     <>
       <h2>Referencias</h2>
-      <button id="menu-btn">Menu</button>
-      <nav id="menu">
-        <a href="#">Seccion 1</a>
+      <button ref={refMenuBtn} onClick={handleToggleMenu}>
+        Menu
+      </button>
+      <nav ref={refMenu} style={{ display:"none" }}>
+        <a href="#1">Seccion 1</a>
         <br />
-
-        <a href="#">Seccion 2</a>
+        <a href="#2">Seccion 2</a>
         <br />
-        <a href="#">Seccion 3</a>
+        <a href="#3">Seccion 3</a>
         <br />
-        <a href="#">Seccion 4</a>
+        <a href="#4">Seccion 4</a>
         <br />
-        <a href="#">Seccion 5</a>
+        <a href="#5">Seccion 5</a>
         <br />
       </nav>
     </>
