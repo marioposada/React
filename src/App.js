@@ -16,6 +16,7 @@ import PracticeHooks from './components/PracticeHooks';
 import ScrollHooks from './components/ScrollHooks';
 import RelojHooks from './components/RelojHooks';
 import Referencias from './components/Referencias';
+import Formularios from './components/Formularios';
 
 function App() {
   
@@ -74,6 +75,12 @@ function App() {
                   
                   <hr />
                   <Referencias />
+                  <hr />
+                  <Formularios />
+                  <hr />
+                  <hr />
+                  <hr />
+                  
                   
       </section>
       </header>
