@@ -17,6 +17,7 @@ import ScrollHooks from './components/ScrollHooks';
 import RelojHooks from './components/RelojHooks';
 import Referencias from './components/Referencias';
 import Formularios from './components/Formularios';
+import Estilos from './components/Estilos';
 
 function App() {
   
@@ -80,6 +81,7 @@ function App() {
                   <hr />
                   <hr />
                   <hr />
+                  <Estilos />
                   
                   
       </section>

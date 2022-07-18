@@ -1,15 +1,28 @@
 import React, { useState } from "react";
 
 export default function Formularios() {
-  const [name, setName] = useState("");
-  const [lenguaje, setLenguaje] = useState("");
-  const [comida, setComida] = useState("");
-  const [terminos, setTerminos] = useState(false);
+  const [form, setForm] = useState({});
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("El formulario se envio con exito");
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+
   };
+
+  const handleChecked = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.checked,
+    });
+
+  };
+
+  const handleSubmit = (e)=> {
+    e.preventDefault()
+    alert("holiiiiiiisss")
+  }
 
   return (
     <>
@@ -19,8 +32,8 @@ export default function Formularios() {
           type="text"
           id="nombre"
           name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={form.nombre}
+          onChange={handleChange}
         />
         <p>Elije tu lenguaje favorito</p>
         <label htmlFor="lenguaje">Vanilla</label>
@@ -29,7 +42,7 @@ export default function Formularios() {
           id="Vanilla"
           name="lenguaje"
           value="Vanilla"
-          onChange={(e) => setLenguaje(e.target.value)}
+          onChange={handleChange}
         />
         <label htmlFor="lenguaje">React</label>
         <input
@@ -37,7 +50,7 @@ export default function Formularios() {
           id="React"
           name="lenguaje"
           value="React"
-          onChange={(e) => setLenguaje(e.target.value)}
+          onChange={handleChange}
         />
         <label htmlFor="lenguaje">Vue</label>
         <input
@@ -45,13 +58,13 @@ export default function Formularios() {
           id="Vue"
           name="lenguaje"
           value="Vue"
-          onChange={(e) => setLenguaje(e.target.value)}
+          onChange={handleChange}
         />
         <p>Elije tu comida favorita</p>
         <select
           name="comida"
           id=""
-          onChange={(e) => setComida(e.target.value)}
+          onChange={handleChange}
           defaultValue
         >
           <option value="">---</option>
@@ -65,7 +78,7 @@ export default function Formularios() {
           type="checkbox"
           id="terminos"
           name="terminos"
-          onChange={(e) => setTerminos(e.target.checked)}
+          onChange={handleChecked}
         />
         <label htmlFor="terminos">Acepto terminos y condiciones</label>
         <br />
