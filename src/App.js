@@ -18,6 +18,7 @@ import RelojHooks from './components/RelojHooks';
 import Referencias from './components/Referencias';
 import Formularios from './components/Formularios';
 import Estilos from './components/Estilos';
+import ContactForm from './components/ContactForm';
 
 function App() {
   
@@ -82,6 +83,10 @@ function App() {
                   <hr />
                   <hr />
                   <Estilos />
+                  <hr />
+                  <hr />
+                  <hr />
+                  <ContactForm />
                   
                   
       </section>
