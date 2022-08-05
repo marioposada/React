@@ -28,7 +28,7 @@ const ContactForm = () => {
       <form className="classForm" onSubmit={handleSubmit}>
         <input
           type="text"
-          name="nombre"
+          name="name"
           placeholder="Escribe tu nombre"
           onBlur={handleBlur}
           onChange={handleChange}
