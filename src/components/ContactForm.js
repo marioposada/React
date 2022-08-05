@@ -3,7 +3,13 @@ import { useForm } from "../hooks/useForm";
 
 import "./contact.css";
 
-const initialForm = {};
+const initialForm = {
+  name: "",
+  email: "",
+  subject: "",
+  comments: "",
+};
+
 const validationsForm = (form) => {};
 
 const ContactForm = () => {
@@ -17,7 +23,7 @@ const ContactForm = () => {
     handleSubmit,
   } = useForm(initialForm, validationsForm);
   return (
-    <div >
+    <div>
       <h2>Formulario de Contacto</h2>
       <form className="classForm" onSubmit={handleSubmit}>
         <input

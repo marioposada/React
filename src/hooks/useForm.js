@@ -8,7 +8,14 @@ export const useForm = (initialForm, validateForm) => {
   const [response, setResponse] = useState(null);
 
   // Registro de los imputs
-  const handleChange = () => {};
+  const handleChange = (e) => {
+    const {name,value} = e.target;
+
+    setForm({
+        ...form,
+        [name]:value
+    })
+  };
 
   // Aqui se analizan las verificaciones, cuando los elementos pierden el foco
   const handleBlur = () => {};

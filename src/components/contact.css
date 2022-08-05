@@ -13,9 +13,12 @@
 .classForm input[type=submit] {
     width: 200px;
     border-radius: 5px;
+    margin: 5px auto;
 }
 
 .classForm textarea {
     margin: 5px 5px;
     height: 180px;
+    font-family: inherit;
+    resize: none;
 }
