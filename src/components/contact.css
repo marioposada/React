@@ -1,0 +1,21 @@
+.classForm {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+}
+
+.classForm input {
+   
+    margin: 5px 5px;
+    height: 40px;
+}
+
+.classForm input[type=submit] {
+    width: 200px;
+    border-radius: 5px;
+}
+
+.classForm textarea {
+    margin: 5px 5px;
+    height: 180px;
+}
